@@ -1,0 +1,117 @@
+[
+  {
+    "id": "INT-0892",
+    "customer_id": "A-2201",
+    "subject": "Q4 Business Review — Pelledryn Data Sciences",
+    "status": "closed",
+    "priority": "low",
+    "created": "2025-12-10 14:00",
+    "thread": [
+      {
+        "from": "morgan.reese (CSM)",
+        "at": "2025-12-10 14:00",
+        "body": "QBR notes with Pelledryn Data Sciences. Attendees: David Oyelaran (VP Data Science, exec sponsor), Sarah Vance (day-to-day owner), two analysts.\n\nHighlights:\n- Usage up 40% QoQ, now core to their reporting workflow\n- Sarah called the platform 'essential' — her word\n- David asked about our roadmap for real-time dashboards — upsell signal\n- No concerns raised. Very positive session.\n\nNext QBR scheduled for March. Renewal due April 5. Expecting a smooth renewal with a roadmap conversation."
+      }
+    ]
+  },
+  {
+    "id": "INT-0917",
+    "customer_id": "A-2201",
+    "subject": "Sponsor transition — Pelledryn Data Sciences",
+    "status": "open",
+    "priority": "medium",
+    "created": "2026-02-04 11:22",
+    "thread": [
+      {
+        "from": "sarah.vance@pelledryn-data.example",
+        "at": "2026-02-04 11:22",
+        "body": "Hi Morgan — wanted to give you a heads-up. David Oyelaran announced yesterday that he's leaving Pelledryn Data at the end of the month. He's been our exec sponsor for the platform since we brought it in. I'm still the day-to-day owner and the team is still using it heavily, but I wanted to flag it since I know sponsor changes can matter for renewal conversations. His replacement hasn't been named yet."
+      },
+      {
+        "from": "morgan.reese (CSM)",
+        "at": "2026-02-04 15:45",
+        "body": "Thanks for the heads-up Sarah — really appreciate the proactive communication. Let's stay close on this. When the new VP is named, I'd love an intro. In the meantime, let's make sure the usage story is well-documented internally so the new sponsor sees the value quickly."
+      }
+    ]
+  },
+  {
+    "id": "INT-0901",
+    "customer_id": "A-3340",
+    "subject": "Integration errors — Azurite Clinical Networks",
+    "status": "open",
+    "priority": "high",
+    "created": "2026-01-22 09:30",
+    "thread": [
+      {
+        "from": "ops@azurite-clinical.example",
+        "at": "2026-01-22 09:30",
+        "body": "We're seeing intermittent failures on the data sync integration. About 1 in 5 syncs fails with a timeout. This is blocking our analysts from trusting the data."
+      },
+      {
+        "from": "support",
+        "at": "2026-01-22 14:10",
+        "body": "Thanks for flagging — looking into this. Can you share the integration logs from the last 24 hours?"
+      },
+      {
+        "from": "ops@azurite-clinical.example",
+        "at": "2026-01-28 10:15",
+        "body": "Following up — still seeing failures. This has been going on for a week now. Our team is starting to work around the platform rather than through it."
+      }
+    ]
+  },
+  {
+    "id": "INT-0912",
+    "customer_id": "A-3340",
+    "subject": "Seat activation stalled — Azurite Clinical Networks (internal)",
+    "status": "open",
+    "priority": "medium",
+    "created": "2026-02-01 16:00",
+    "thread": [
+      {
+        "from": "taylor.kim (CSM)",
+        "at": "2026-02-01 16:00",
+        "body": "Internal note — Azurite Clinical seat count dropped from 14 active to 8 over the last six weeks. Tried to reach Jamie Liu (original champion) twice, no response. The integration issues in INT-0901 aren't helping. Renewal is March 28. Flagging as at-risk."
+      }
+    ]
+  },
+  {
+    "id": "INT-0876",
+    "customer_id": "A-1908",
+    "subject": "Expansion opportunity — Glasswick Content Works",
+    "status": "open",
+    "priority": "low",
+    "created": "2026-01-15 13:00",
+    "thread": [
+      {
+        "from": "morgan.reese (CSM)",
+        "at": "2026-01-15 13:00",
+        "body": "Nadia mentioned in our last call that Glasswick Content is spinning up a new business unit (podcast analytics, ~30 people) in Q2. She's already socializing our platform to that team. Strong expansion signal — we should have a proposal ready for the renewal conversation in May. Current contract is 60 seats; new BU would be another 25-30."
+      }
+    ]
+  },
+  {
+    "id": "INT-0858",
+    "customer_id": "A-4477",
+    "subject": "Quick question re: export formats — Wireflint Data Systems",
+    "status": "closed",
+    "priority": "low",
+    "created": "2025-12-08 10:45",
+    "thread": [
+      {
+        "from": "kai@wireflint-data.example",
+        "at": "2025-12-08 10:45",
+        "body": "Can we export to Parquet or just CSV?"
+      },
+      {
+        "from": "support",
+        "at": "2025-12-08 11:30",
+        "body": "Parquet export is available on Growth tier and above. On Starter you've got CSV and JSON."
+      },
+      {
+        "from": "kai@wireflint-data.example",
+        "at": "2025-12-08 11:35",
+        "body": "Got it, thanks."
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "inc-2026-02-14",
+    "title": "Post-mortem: checkout 500s on Valentine's Day",
+    "tags": ["checkout", "incident", "postmortem"],
+    "body": "On Feb 14 the checkout service saw a 12-minute spike to 8% error rate. Root cause: a feature flag for a promotional banner was enabled without the backing config, causing a nil dereference in the cart view for ~3% of requests. Fix: config deployed + flag toggle added to the pre-deploy checklist. Lesson: feature flags need a 'config prerequisite' field."
+  },
+  {
+    "id": "inc-2026-01-29",
+    "title": "Post-mortem: inventory query latency",
+    "tags": ["inventory", "database", "postmortem"],
+    "body": "Inventory p99 latency went from 120ms to 900ms for about an hour on Jan 29. Root cause: a batch reconciliation job was accidentally scheduled for 10am instead of 2am, competing with live traffic for DB IOPS. Fix: job rescheduled, alerting added for unexpected batch job activity during business hours."
+  },
+  {
+    "id": "kb-deploy-correlation",
+    "title": "Correlating incidents with deploys",
+    "tags": ["deploys", "diagnosis", "process"],
+    "body": "First question for any incident: did something deploy recently?\n\nRule of thumb: if an alert fires within 20 minutes of a deploy to the same service, the deploy is the prime suspect until proven otherwise. Check the changelog, check whether the error signature matches the changed code paths.\n\nException: dependency alerts. If service A is alerting but service B just deployed and A depends on B, check B first."
+  }
+]

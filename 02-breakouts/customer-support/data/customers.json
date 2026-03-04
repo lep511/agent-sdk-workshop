@@ -1,0 +1,46 @@
+[
+  {
+    "id": "C-8821",
+    "email": "alex@fernleaf-design.example",
+    "name": "Alex Moreno",
+    "company": "Fernleaf Design Works",
+    "plan": "Pro",
+    "since": "2024-03",
+    "status": "active",
+    "mrr_usd": 149,
+    "notes": "Long-tenured customer, generally low-touch. Had one billing issue in 2024 (resolved). Uses the API integration heavily."
+  },
+  {
+    "id": "C-9934",
+    "email": "priya@coilforgemfg.example",
+    "name": "Priya Chandrasekaran",
+    "company": "Coilforge Industrial Goods",
+    "plan": "Enterprise",
+    "since": "2025-09",
+    "status": "active",
+    "mrr_usd": 2400,
+    "notes": "Recent enterprise customer, still in onboarding. CSM is Jordan Reese. Flagged as at-risk last month due to slow adoption — only 3 of 12 planned seats activated."
+  },
+  {
+    "id": "C-7102",
+    "email": "marcus@lonepath-llc.example",
+    "name": "Marcus Webb",
+    "company": "Lonepath Dev Works",
+    "plan": "Starter",
+    "since": "2025-11",
+    "status": "active",
+    "mrr_usd": 29,
+    "notes": "New customer. First ticket. No history yet."
+  },
+  {
+    "id": "C-5560",
+    "email": "devops@prismwarpmedia.example",
+    "name": "DevOps Team",
+    "company": "Prismwarp Media Works",
+    "plan": "Pro",
+    "since": "2023-07",
+    "status": "past_due",
+    "mrr_usd": 149,
+    "notes": "Account went past due last week — payment method expired. Auto-dunning emails sent, no response yet. Long-standing customer otherwise, worth a human touch before any suspension."
+  }
+]

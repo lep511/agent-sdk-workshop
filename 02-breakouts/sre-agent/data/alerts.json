@@ -1,0 +1,32 @@
+[
+  {
+    "fired_at": "2026-03-05 12:03",
+    "service": "checkout",
+    "severity": "warning",
+    "message": "error_rate crossed 2% threshold (2.4%)"
+  },
+  {
+    "fired_at": "2026-03-05 12:08",
+    "service": "checkout",
+    "severity": "critical",
+    "message": "error_rate crossed 4% threshold (4.9%) — paging on-call"
+  },
+  {
+    "fired_at": "2026-03-05 11:45",
+    "service": "checkout",
+    "severity": "info",
+    "message": "deploy completed: v2.14.1"
+  },
+  {
+    "fired_at": "2026-03-04 22:17",
+    "service": "inventory",
+    "severity": "warning",
+    "message": "query latency p99 > 500ms for 5min (self-resolved at 22:24)"
+  },
+  {
+    "fired_at": "2026-03-03 03:40",
+    "service": "api-gateway",
+    "severity": "info",
+    "message": "rate limiter: 429s spiked briefly (batch job, expected)"
+  }
+]

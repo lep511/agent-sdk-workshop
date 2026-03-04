@@ -1,0 +1,22 @@
+[
+  {
+    "id": "board-pre-reads",
+    "title": "Board pre-read questions — Q1 2026 meeting",
+    "body": "Questions submitted by board members ahead of the March 6 meeting:\n\n1. (Shalemark Venture Partners) The deck shows enterprise segment revenue up 41% but SMB only up 12%. Is the SMB slowdown intentional, or are we losing share? What's the plan?\n\n2. (Brayworth Growth) Burn rate ticked up again this quarter despite the September cost actions. Walk us through the drivers and the updated path to breakeven.\n\n3. (Independent director) Three senior departures in Q4. What's the retention story for the rest of the leadership team?\n\n4. (Shalemark Venture Partners) Competitive update — we've heard Bucklefern Commerce Holdings is about to announce something in our space. What do we know?\n\nRecommendation from CFO: address #2 head-on in opening remarks rather than waiting for Q&A. The burn number looks worse than it is because of the one-time office consolidation charge."
+  },
+  {
+    "id": "q1-priorities-draft",
+    "title": "Q1 2026 Priorities — Working draft",
+    "body": "Three priorities for Q1:\n\n1. Enterprise GTM acceleration — 5 new enterprise AEs hired, new pricing tier launches March 15. Target: 8 new enterprise logos by end of Q1.\n\n2. Platform reliability — SLA commitments kick in April 1 for enterprise tier. Engineering focus on getting p99 latency under contractual thresholds. Currently at 94% of target; need 100%.\n\n3. Cost discipline — path to breakeven by Q3 requires holding opex flat while revenue grows 30%+. Hiring freeze in non-sales functions extended through Q2.\n\nNOT in Q1 scope (explicitly deferred): international expansion, new product lines, M&A.\n\nOpen question for board: the enterprise acceleration and cost discipline goals are in tension. If we're tracking ahead on enterprise pipeline by end of Q1, do we want authorization to unfreeze hiring in CS/Implementation to support the new logos?"
+  },
+  {
+    "id": "ironvane-account-notes",
+    "title": "Ironvane Freight Systems — Account notes",
+    "body": "Opportunity: Ironvane is evaluating platforms for their core payment processing. ~$2.4M ACV if we win the full scope.\n\nDecision makers: Morgan Lee (CEO, final say), Jordan Kim (CTO, technical evaluation), procurement team (terms).\n\nStatus: Technical POC completed last month, we scored well. Now in exec evaluation phase — this Thursday's call is the first time our CEO meets theirs.\n\nCompetitive: They're also evaluating Bucklefern Commerce Holdings and one other. Bucklefern has the brand advantage; we have the better technical fit per Jordan's feedback.\n\nRisks: Ironvane had a rough Q4 (their CPO just left for Tinplate). Some concern internally that they might slow the decision while they stabilize.\n\nWhat Morgan Lee cares about (from sales team notes): reliability track record, path to international support (they just opened Amsterdam), and exec-to-exec relationship. She's mentioned twice that their last vendor relationship soured because 'we could never get anyone senior on the phone.'"
+  },
+  {
+    "id": "kessling-insights-prep",
+    "title": "Kessling Market Insights briefing — prep notes",
+    "body": "Annual analyst briefing with Taylor Reeves. Last year's feedback: 'too much roadmap, not enough customer proof.' Taylor specifically asked for named customer examples this time.\n\nProof points to lead with:\n- Varnished Oak Retail: 34% checkout conversion improvement after migration\n- Witterleigh Holdings Group: consolidated 4 payment vendors into 1, reduced ops overhead 60%\n- (Need a third — check with customer marketing for recent case study approvals)\n\nTopics Taylor will likely push on:\n- Enterprise traction (she's skeptical we can move upmarket)\n- Gross margin trajectory\n- How we're differentiating vs. Bucklefern Commerce Holdings now that they've launched in our segment\n\nDO NOT share: anything about the potential partnership discussions. Those are still under NDA and Taylor has a history of connecting dots in her reports."
+  }
+]

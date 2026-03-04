@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kb-churn-signals",
+    "title": "Churn Risk Signals — Leading Indicators",
+    "tags": ["churn", "risk", "renewal", "signals"],
+    "body": "Ranked leading indicators of churn. Note: these are LEADING indicators — they predict future churn even when current usage looks fine. Usage decline is a LAGGING indicator (by the time it shows up, the decision may already be made).\n\n1. EXECUTIVE SPONSOR DEPARTURE — The strongest signal. When the person who championed your product internally leaves, your product loses its internal defender. New leadership often evaluates tools with fresh eyes. Action: Immediately identify and cultivate a new champion before the renewal conversation. Do NOT wait for usage to decline.\n\n2. CHAMPION GOES QUIET — If your day-to-day contact stops responding to check-ins, they may have already mentally moved on. Often precedes usage decline by 4-8 weeks.\n\n3. M&A OR REORG — Acquiring company may consolidate tools. Reorg may move your champion to a different role. Either way, your contract is suddenly under review by people who didn't choose you.\n\n4. INTEGRATION/RELIABILITY ISSUES — Multiple unresolved tickets erode trust. The team starts working around the tool rather than through it.\n\n5. USAGE DECLINE — Lagging indicator. By the time you see this, investigate signals 1-4 for root cause.\n\nRULE OF THUMB: Never assess account health on usage metrics alone. Usage is what already happened. Signals 1-3 tell you what's about to happen."
+  },
+  {
+    "id": "kb-upsell-triggers",
+    "title": "Expansion & Upsell Triggers",
+    "tags": ["upsell", "expansion", "growth"],
+    "body": "Signals that an account is ready for expansion:\n\n1. SEAT SATURATION — >85% of licensed seats active. They're getting value and hitting capacity.\n\n2. FEATURE REQUESTS FOR HIGHER-TIER CAPABILITIES — 'Can we export to Parquet?' 'Do you have SSO?' They're bumping against plan limits.\n\n3. NEW TEAM / BUSINESS UNIT — Organic land-and-expand. If they mention a new BU, get in front of that team early.\n\n4. INTERNAL CHAMPION ADVOCACY — If your champion is socializing your product to other teams unprompted, that's the strongest signal. Give them materials to make the internal pitch.\n\n5. POSITIVE REFERENCE ACTIVITY — Case study participation, speaking at your events, referrals. They're publicly invested in your success.\n\nTIMING: Expansion conversations land best when bundled with renewal. Have the proposal ready 60-90 days before renewal date."
+  },
+  {
+    "id": "kb-renewal-playbook",
+    "title": "Standard Renewal Playbook",
+    "tags": ["renewal", "playbook", "process"],
+    "body": "T-90 DAYS:\n- Run account health review — check usage, tickets, interaction history against churn signals\n- Classify: healthy / at-risk / upsell-opportunity\n- If at-risk, escalate to CSM for intervention NOW, not at T-30\n\nT-60 DAYS:\n- Schedule renewal conversation with economic buyer, not just day-to-day user\n- If sponsor changed since last renewal, make sure new sponsor has seen the value story\n\nT-30 DAYS:\n- Present renewal terms + expansion proposal if applicable\n- Address any open issues — don't go into renewal with unresolved tickets\n\nT-0:\n- Close. If you've done T-90 through T-30 right, this is paperwork.\n\nANTI-PATTERN: Discovering a risk signal at T-30 because nobody ran the T-90 review. At-risk accounts need runway to recover."
+  },
+  {
+    "id": "kb-competitive-displacement",
+    "title": "Competitive Displacement Signals",
+    "tags": ["competition", "displacement", "risk"],
+    "body": "Signs a competitor is in the account:\n\n- Champion asks detailed questions about features you don't have (they're building a comparison matrix)\n- Request for a usage/ROI report 'for internal review' (they're justifying a switch)\n- New stakeholder appears who wasn't part of the original buying decision\n- Radio silence followed by a sudden flurry of activity near renewal\n- Direct mention of evaluating alternatives (at least they're telling you)\n\nIf you see these: get the economic buyer on a call, understand what's driving the evaluation, and address it directly. Don't assume loyalty — earn it again."
+  },
+  {
+    "id": "kb-account-health-rubric",
+    "title": "Account Health Classification Rubric",
+    "tags": ["health", "classification", "scoring"],
+    "body": "HEALTHY:\n- Usage stable or growing\n- >70% seat activation\n- Active champion who responds to check-ins\n- No open P0/P1 tickets\n- No leading churn signals\n\nAT-RISK:\n- ANY leading churn signal (sponsor departure, champion silence, M&A, reliability issues)\n- OR usage decline >20% QoQ\n- OR seat activation drop\n- OR multiple unresolved tickets\n\nUPSELL-OPPORTUNITY:\n- All 'healthy' criteria PLUS one or more expansion triggers (seat saturation, tier-limit requests, new BU, champion advocacy)\n\nIMPORTANT: 'Healthy' and 'at-risk' are not mutually exclusive with usage metrics. An account with growing usage can be at-risk if the sponsor just left. Check leading indicators, not just the dashboard."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-03-05",
+    "time": "09:00",
+    "title": "Leadership standup",
+    "attendees": ["VP Eng", "VP Product", "VP Sales", "CFO"],
+    "notes": "Weekly sync. No agenda doc this week — Morgan said they'd bring Q1 metrics verbally."
+  },
+  {
+    "date": "2026-03-05",
+    "time": "11:30",
+    "title": "1:1 with VP Engineering",
+    "attendees": ["Sam Patel"],
+    "notes": "Sam wants to discuss the platform team headcount plan."
+  },
+  {
+    "date": "2026-03-05",
+    "time": "15:00",
+    "title": "Customer call — Ironvane Freight Systems",
+    "attendees": ["Morgan Lee (Ironvane CEO)", "Jordan Kim (Ironvane CTO)"],
+    "notes": "Ironvane is evaluating us vs. two competitors. This is the exec sponsor intro call."
+  },
+  {
+    "date": "2026-03-06",
+    "time": "10:00",
+    "title": "Board meeting — Q1 priorities",
+    "attendees": ["Full board", "CFO", "General Counsel"],
+    "notes": "Quarterly board meeting. Deck went out Monday. Board pre-read questions came in yesterday — see 'board-pre-reads' doc."
+  },
+  {
+    "date": "2026-03-06",
+    "time": "14:00",
+    "title": "All-hands prep",
+    "attendees": ["Comms team"],
+    "notes": "Reviewing Friday's all-hands slides."
+  },
+  {
+    "date": "2026-03-09",
+    "time": "09:30",
+    "title": "Analyst briefing — Kessling Market Insights",
+    "attendees": ["Taylor Reeves (Kessling Market Insights)"],
+    "notes": "Annual analyst briefing. Last year's feedback: we over-indexed on roadmap, under-indexed on customer proof points."
+  }
+]

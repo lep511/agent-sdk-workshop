@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kb-export-timeout",
+    "title": "PDF export timeouts on large projects",
+    "tags": ["export", "pdf", "timeout", "known-issue"],
+    "body": "KNOWN ISSUE (tracking: ENG-4471)\n\nPDF exports over ~150 pages may time out due to a rendering bottleneck introduced in the v4.2 release. Engineering fix is in progress, ETA next Tuesday's deploy.\n\nWorkaround: have the customer split the export into chunks under 150 pages. The chunked PDFs can be merged externally.\n\nFor customers with urgent deadlines: offer to run the export on our side with the extended timeout flag (internal tool, tier-2 has access). Escalate to tier-2 with the project ID.\n\nDo NOT promise the Tuesday ETA to customers — say 'early next week' in case it slips."
+  },
+  {
+    "id": "kb-sso-new-users",
+    "title": "SSO: new users getting Access Denied",
+    "tags": ["sso", "okta", "saml", "enterprise"],
+    "body": "Most common cause: SCIM provisioning delay.\n\nWhen a customer adds users to their IdP group, SCIM sync to our side can take up to 15 minutes. Users who try to log in before sync completes get a generic Access Denied.\n\nDiagnostic: ask when the users were added. If within the last 15 min, advise waiting and retrying.\n\nIf it's been more than 15 minutes:\n1. Check if SCIM provisioning is actually enabled on the account (Settings → SSO → Provisioning). Many customers set up SAML but forget SCIM.\n2. If SCIM is off, they need to manually invite users in our UI in addition to the IdP assignment. This is the most common misconfiguration.\n3. If SCIM is on and it's been >15 min, escalate to tier-2 with the account ID — there may be a sync error in the logs.\n\nFor Enterprise customers: loop in their CSM. SSO issues during onboarding are a major churn signal."
+  },
+  {
+    "id": "kb-billing-email",
+    "title": "Changing the billing email address",
+    "tags": ["billing", "email", "settings", "self-serve"],
+    "body": "Customers can change their billing email themselves:\n\nSettings → Billing → Billing contact → Edit\n\nNote: the billing email is SEPARATE from the account login email. Changing one doesn't affect the other. If the customer wants to change their login email, that's Settings → Account → Email, and requires verification.\n\nThis is fully self-serve on all plan tiers. Just send them the path."
+  },
+  {
+    "id": "kb-duplicate-charges",
+    "title": "Handling duplicate charge complaints",
+    "tags": ["billing", "charges", "refund"],
+    "body": "First: verify it's actually a duplicate. Common false alarms:\n\n1. Account was past due → payment method updated → system charged for the overdue period AND the current period. This is two charges, but both are valid. Explain and do NOT refund.\n\n2. Customer upgraded mid-cycle → prorated charge for the upgrade + next month's full charge. Both valid.\n\n3. Annual→monthly switch can create overlapping charges. Usually valid but confusing.\n\nIf it IS a genuine duplicate (same amount, same period, no account change explanation):\n- Refund the duplicate immediately, no escalation needed (up to $500)\n- Apologize clearly, don't make excuses\n- Add internal note with the transaction IDs so billing can investigate the root cause\n\nFor past-due accounts specifically: the two charges are almost always the catch-up + current. Look at the dates before assuming it's a dupe."
+  },
+  {
+    "id": "kb-escalation-criteria",
+    "title": "When to escalate to tier-2",
+    "tags": ["escalation", "process"],
+    "body": "Escalate to tier-2 when:\n- Requires account changes you can't make (refunds over $500, plan changes, data exports)\n- Requires engineering log access or internal tooling\n- Enterprise customer with an SLA-covered issue\n- Customer is visibly escalated (threatening churn, asking for manager)\n- You've gone two rounds without progress\n\nDo NOT escalate for:\n- Questions with documented answers (search the KB first!)\n- Standard refunds under $500\n- 'Can you add feature X' — that's a feature request, not a support ticket. Log it and close.\n\nWhen escalating, always add an internal note summarizing: what the customer wants, what you've already tried/ruled out, and what you think tier-2 needs to do."
+  }
+]

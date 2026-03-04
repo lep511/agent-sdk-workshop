@@ -1,0 +1,20 @@
+[
+  {
+    "id": "kb-exec-comm-prefs",
+    "title": "Executive communication preferences",
+    "tags": ["preferences", "comms", "style"],
+    "body": "Compiled preferences from the exec team:\n\n- CEO: Bullets over prose. One page max for briefings. Hates passive voice. Wants the recommendation up front, supporting detail after.\n- CFO: Numbers first. Will ignore any claim without a number attached. Prefers tables over charts.\n- VP Sales: Loves narrative. Wants the customer story. Will tune out if you lead with metrics.\n- General Counsel: Forward anything involving contracts, IP, or public statements. Better to over-include than under-include."
+  },
+  {
+    "id": "kb-board-protocol",
+    "title": "Board meeting protocol",
+    "tags": ["board", "governance", "protocol"],
+    "body": "Standard board meeting prep cycle:\n\n- T-7 days: deck draft to CFO and GC for review\n- T-5 days: deck sent to board (Monday before a Friday meeting)\n- T-2 days: pre-read questions collected from board members\n- T-1 day: exec team prep session to align on answers\n\nMaterials go through the GC's assistant for distribution — never email board members directly.\n\nBoard members' known priorities:\n- Shalemark Venture Partners (lead investor): growth metrics, competitive position\n- Brayworth Growth: path to profitability, burn rate\n- Independent directors: team health, governance"
+  },
+  {
+    "id": "kb-email-templates",
+    "title": "Common email templates",
+    "tags": ["email", "templates"],
+    "body": "Template — declining a meeting request:\n\n'Thanks for reaching out. [CEO]'s calendar is tight through [month] — would [alternative, e.g., a 15-min call with VP X] work as a starting point? Happy to find time for a fuller conversation in [later month] if useful.'\n\nTemplate — customer exec intro follow-up:\n\n'[Name], great to connect today. A few follow-ups from our conversation: [bullets]. [Contact] on my team will reach out on [specific next step]. Looking forward to [next milestone].'\n\nAlways cc the relevant AE on customer emails so they can track the thread."
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "id": "T-1047",
+    "customer_id": "C-8821",
+    "subject": "Export feature timing out on large projects",
+    "status": "open",
+    "priority": "medium",
+    "created": "2026-03-04 14:22",
+    "thread": [
+      {
+        "from": "alex@fernleaf-design.example",
+        "at": "2026-03-04 14:22",
+        "body": "Hi team — the PDF export has been timing out on our larger projects (200+ pages) for the past few days. Smaller exports work fine. We have a client deliverable Friday and really need this working. Anything known on your end?"
+      }
+    ]
+  },
+  {
+    "id": "T-1048",
+    "customer_id": "C-9934",
+    "subject": "SSO not working for new team members",
+    "status": "open",
+    "priority": "high",
+    "created": "2026-03-04 16:05",
+    "thread": [
+      {
+        "from": "priya@coilforgemfg.example",
+        "at": "2026-03-04 16:05",
+        "body": "We added 4 new team members to our Okta group this morning but they're getting 'Access Denied' when they try to log in through SSO. I've double-checked the Okta assignment on our side. Our existing users are fine. This is blocking our rollout — please advise ASAP."
+      },
+      {
+        "from": "support-bot",
+        "at": "2026-03-04 16:06",
+        "body": "[automated] Ticket tagged: SSO, enterprise. CSM Jordan Reese notified."
+      }
+    ]
+  },
+  {
+    "id": "T-1049",
+    "customer_id": "C-7102",
+    "subject": "How do I change my billing email?",
+    "status": "open",
+    "priority": "low",
+    "created": "2026-03-05 09:11",
+    "thread": [
+      {
+        "from": "marcus@lonepath-llc.example",
+        "at": "2026-03-05 09:11",
+        "body": "Hi, I signed up with my personal email but want invoices to go to our accounting address instead. How do I change that? Thanks!"
+      }
+    ]
+  },
+  {
+    "id": "T-1050",
+    "customer_id": "C-5560",
+    "subject": "Why was I charged twice?",
+    "status": "open",
+    "priority": "high",
+    "created": "2026-03-05 10:47",
+    "thread": [
+      {
+        "from": "devops@prismwarpmedia.example",
+        "at": "2026-03-05 10:47",
+        "body": "I see two charges on my card for this month — one on March 1 for $149 and another on March 4 for $149. What's going on? I'm already not happy about the recent price increase and now this. Please refund the duplicate immediately."
+      }
+    ]
+  },
+  {
+    "id": "T-1032",
+    "customer_id": "C-8821",
+    "subject": "API rate limit questions",
+    "status": "closed",
+    "priority": "low",
+    "created": "2026-02-20 11:30",
+    "resolved": "2026-02-20 14:15",
+    "thread": [
+      {
+        "from": "alex@fernleaf-design.example",
+        "at": "2026-02-20 11:30",
+        "body": "What's the rate limit on the /projects endpoint? Getting sporadic 429s."
+      },
+      {
+        "from": "support",
+        "at": "2026-02-20 14:15",
+        "body": "Hi Alex — Pro plan gets 100 req/min per endpoint. If you're bursting above that, you might want to add a retry with backoff on your side, or we can talk about the Enterprise tier which lifts that to 1000/min. Let me know if you'd like to discuss!"
+      }
+    ]
+  }
+]

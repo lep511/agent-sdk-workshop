@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Claude Code
+.claude/settings.local.json
+
+# Workshop runtime state — each attendee's memory store is personal
+**/memory_store.json
+
+# Node (if any JS exercises get added)
+node_modules/

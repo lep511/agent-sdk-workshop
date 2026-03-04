@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+"""
+Single entry point for the workshop. One command to remember.
+
+    ./workshop check              Verify your setup (run this first!)
+    ./workshop demo               Run the guided demo
+    ./workshop demo --show-prompt Peek under the hood: see the full assembled context
+    ./workshop breakout           List available breakouts
+    ./workshop breakout <name>    Run a specific breakout
+    ./workshop reset              Delete all memory_store.json files
+
+On Windows, invoke as: python workshop <command>
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).parent
+GUIDED_DEMO = REPO_ROOT / "01-guided-demo" / "agent.py"
+BREAKOUTS_DIR = REPO_ROOT / "02-breakouts"
+CHECK_SCRIPT = REPO_ROOT / "check_setup.py"
+
+
+def _run_python(script_path, extra_args=None):
+    """Run a Python script with the same interpreter that's running us.
+
+    Using subprocess.run rather than importing so that each agent run
+    starts with a fully fresh process (no state leakage between runs,
+    matches what happens if you run python directly)."""
+    argv = [sys.executable, str(script_path)]
+    if extra_args:
+        argv.extend(extra_args)
+    try:
+        subprocess.run(argv, check=False)
+    except KeyboardInterrupt:
+        pass  # the agent scripts already handle this gracefully
+
+
+def cmd_check():
+    """Run the pre-workshop health check."""
+    _run_python(CHECK_SCRIPT)
+
+
+def cmd_demo(extra_args=None):
+    """Run the guided demo agent. Extra args (e.g., --show-prompt) pass through."""
+    if not GUIDED_DEMO.exists():
+        print("Can't find {} — are you in the repo root?".format(GUIDED_DEMO))
+        sys.exit(1)
+    _run_python(GUIDED_DEMO, extra_args)
+
+
+def _list_breakouts():
+    """Return sorted list of available breakout names."""
+    if not BREAKOUTS_DIR.exists():
+        return []
+    breakouts = []
+    for p in BREAKOUTS_DIR.iterdir():
+        if p.is_dir() and not p.name.startswith("_") and (p / "run.py").exists():
+            breakouts.append(p.name)
+    return sorted(breakouts)
+
+
+def cmd_breakout(name=None):
+    """List breakouts, or run the named one."""
+    available = _list_breakouts()
+    if not available:
+        print("No breakouts found in {}".format(BREAKOUTS_DIR))
+        sys.exit(1)
+
+    if name is None:
+        print("\nAvailable breakouts:")
+        for b in available:
+            readme = BREAKOUTS_DIR / b / "README.md"
+            summary = ""
+            if readme.exists():
+                # Grab the first non-header, non-blank line as a summary.
+                for line in readme.read_text().splitlines():
+                    line = line.strip()
+                    if line and not line.startswith("#") and not line.startswith("---") and not line.startswith("**"):
+                        summary = line[:70]
+                        break
+            print("  {:<22}  {}".format(b, summary))
+        print("\nRun one with: ./workshop breakout <name>")
+        return
+
+    if name not in available:
+        # Fuzzy-ish match to be forgiving of typos.
+        matches = [b for b in available if name.lower() in b.lower()]
+        if len(matches) == 1:
+            name = matches[0]
+            print("(matched '{}' → {})".format(sys.argv[2], name))
+        else:
+            print("Unknown breakout '{}'. Available:".format(name))
+            for b in available:
+                print("  {}".format(b))
+            sys.exit(1)
+
+    run_py = BREAKOUTS_DIR / name / "run.py"
+    _run_python(run_py)
+
+
+def cmd_reset():
+    """Delete all memory_store.json files (fresh start)."""
+    deleted = []
+    for p in REPO_ROOT.rglob("memory_store.json"):
+        p.unlink()
+        deleted.append(p.relative_to(REPO_ROOT))
+    if deleted:
+        print("Deleted {} memory file(s):".format(len(deleted)))
+        for d in deleted:
+            print("  {}".format(d))
+    else:
+        print("No memory files found — already fresh.")
+
+
+def cmd_help():
+    print(__doc__)
+
+
+COMMANDS = {
+    "check": cmd_check,
+    "demo": cmd_demo,
+    "breakout": cmd_breakout,
+    "reset": cmd_reset,
+    "help": cmd_help,
+    "--help": cmd_help,
+    "-h": cmd_help,
+}
+
+
+def main():
+    if len(sys.argv) < 2:
+        cmd_help()
+        sys.exit(0)
+
+    cmd = sys.argv[1]
+    handler = COMMANDS.get(cmd)
+    if handler is None:
+        print("Unknown command '{}'. Run './workshop help' for usage.".format(cmd))
+        sys.exit(1)
+
+    # Demo and breakout take optional extra arguments.
+    extra = sys.argv[2:] if len(sys.argv) > 2 else []
+    if cmd == "demo":
+        handler(extra or None)
+    elif cmd == "breakout":
+        handler(extra[0] if extra else None)
+    else:
+        handler()
+
+
+if __name__ == "__main__":
+    main()

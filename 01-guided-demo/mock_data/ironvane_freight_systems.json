@@ -1,0 +1,70 @@
+{
+  "_note": "FICTIONAL COMPANY — all data is synthetic workshop demo content",
+  "company": "Ironvane Freight Systems",
+  "industry": "Supply Chain Software",
+  "founded": 2019,
+  "headquarters": "Denver, CO",
+  "employees": 620,
+
+  "financials": {
+    "last_reported_quarter": "Q4 2025",
+    "revenue_ttm_usd": 89000000,
+    "revenue_growth_yoy_pct": 67,
+    "gross_margin_pct": 72,
+    "net_income_ttm_usd": -41000000,
+    "cash_on_hand_usd": 88000000,
+    "last_funding_round": {
+      "series": "C",
+      "amount_usd": 95000000,
+      "date": "2025-08",
+      "lead_investor": "Brayworth Growth Partners"
+    },
+    "notes": "High-growth, high-burn. Roughly 21 months of runway at current burn rate. Management signaling a bridge round or path-to-profitability inflection in 2026."
+  },
+
+  "news": [
+    {
+      "date": "2026-02-14",
+      "headline": "Ironvane Freight Systems wins three-year contract with national grocery chain",
+      "summary": "Largest customer win to date. Contract reportedly worth $14M annually once fully ramped. Covers route optimization and carrier management across 340 distribution centers.",
+      "topics": ["customer", "contract", "growth"]
+    },
+    {
+      "date": "2026-02-03",
+      "headline": "Ironvane CPO Dana Okafor departs for Tinplate Merchant Systems",
+      "summary": "Okafor led product since 2021 and was seen as a key architect of Ironvane's API platform. Departure raises questions about product leadership continuity ahead of a critical fundraising year.",
+      "topics": ["leadership", "departure"]
+    },
+    {
+      "date": "2026-01-16",
+      "headline": "Ironvane opens European headquarters in Amsterdam",
+      "summary": "First physical presence outside North America. Initial team of 25 focused on sales and implementation. Company cites EU supply-chain regulation as a tailwind.",
+      "topics": ["expansion", "international"]
+    },
+    {
+      "date": "2025-12-09",
+      "headline": "Ironvane releases open API for carrier integrations",
+      "summary": "Third-party carriers can now self-onboard to the Ironvane network. Move aimed at accelerating network effects. 12 carriers integrated during private beta.",
+      "topics": ["product", "api", "platform"]
+    }
+  ],
+
+  "press_releases": [
+    {
+      "date": "2026-02-14",
+      "title": "Ironvane Freight Systems Selected by Major National Grocer for Supply Chain Optimization",
+      "body": "DENVER, CO — Ironvane Freight Systems today announced a multi-year agreement with one of the nation's largest grocery chains to deploy Ironvane's route optimization and carrier management platform across the retailer's 340 distribution centers. The rollout begins in Q2 2026 in the retailer's western region. 'This partnership validates everything we've built,' said Ironvane CEO Morgan Lee. 'Grocery is one of the most demanding logistics environments there is — tight margins, perishable goods, relentless schedules. We're proud to be trusted with it.' Financial terms were not disclosed."
+    },
+    {
+      "date": "2026-01-16",
+      "title": "Ironvane Freight Systems Expands to Europe with Amsterdam Office",
+      "body": "DENVER, CO — Ironvane Freight Systems today announced the opening of its European headquarters in Amsterdam, Netherlands. The new office will initially house a team of 25 across sales, implementation, and customer success, with plans to grow to 60 by year-end. 'European supply chains are facing unprecedented regulatory and sustainability pressure,' said VP of International Farida Haidari. 'Our platform was built for exactly this kind of complexity.' The company has already signed its first three European customers."
+    }
+  ],
+
+  "competitive_landscape": {
+    "direct_competitors": ["Cogsprint Systems", "Frackstone Haulage Systems", "Railquirk Transit Systems"],
+    "positioning": "API-first, developer-friendly alternative to legacy TMS (transport management systems). Strongest with mid-market shippers who've outgrown spreadsheets but aren't ready for SAP-class deployments.",
+    "market_share_estimate_pct": 1.9
+  }
+}

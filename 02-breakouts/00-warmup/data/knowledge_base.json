@@ -1,0 +1,26 @@
+[
+  {
+    "id": "kb-tinplate-profile",
+    "title": "Tinplate Merchant Systems — Company Profile",
+    "tags": ["tinplate", "fintech", "payments", "profile"],
+    "body": "FICTIONAL COMPANY.\n\nTinplate Merchant Systems is a mid-market fintech company founded in 2017, headquartered in Austin TX, ~1,840 employees. Financial technology sector, focused on payments for merchants processing $500k–$50M annual volume.\n\nFINANCIALS (as of Q4 2025):\n- TTM revenue: $412M (+34% YoY)\n- Q4 2025 revenue: $118M (beat consensus of $109M)\n- Gross margin: 61% (up 7 points YoY)\n- Net income TTM: -$28M (still burning cash)\n- Cash on hand: $195M\n- Last raise: Series D, $180M, Nov 2024 (lead: Shalemark Venture Partners)\n- Guidance: operating breakeven in H2 2026\n\nRECENT MOVES:\n- Feb 2026: Launched 'Tinplate Capital' embedded lending product for merchants >$50k/month volume\n- Jan 2026: Hired Dana Okafor (ex-Ironvane Freight Systems CPO) as Head of Platform\n- Jan 2026: 47-minute checkout outage affecting ~12% of merchants (DB failover issue, postmortem published)\n- Dec 2025: Expanded to Canada and UK — first international markets\n\nCOMPETITIVE: ~4.2% market share. Direct competitors include Bucklefern Commerce Holdings, Wharfton Payment Rails, Bronzefathom Transaction Works. Differentiates on dev experience and embedded financial products. Weaker than competitors on in-person/POS."
+  },
+  {
+    "id": "kb-bucklefern-profile",
+    "title": "Bucklefern Commerce Holdings — Company Profile",
+    "tags": ["bucklefern", "payments", "public", "profile"],
+    "body": "FICTIONAL COMPANY.\n\nBucklefern Commerce Holdings is a mature public payments company, founded 2010, headquartered in Seattle WA, ~4,200 employees.\n\nFINANCIALS (as of Q4 2025):\n- TTM revenue: $1.8B (+11% YoY — growth slowing from 18% prior year)\n- Net income TTM: $210M (profitable)\n- Strong enterprise segment, legacy strength in in-person/POS\n\nRECENT MOVES:\n- Feb 2026: Announced acquisition of Graphlock Terminal Systems for $340M — consolidation play in retail POS\n- Jan 2026: CFO departed; interim CFO in place while search continues\n- Dec 2025: Disappointing Q3 results, stock down ~15% on slowing growth\n\nCOMPETITIVE: Market leader in POS segment. Losing share to nimbler players in online-first payments. Acquisition-heavy strategy over last 18 months."
+  },
+  {
+    "id": "kb-ironvane-profile",
+    "title": "Ironvane Freight Systems — Company Profile",
+    "tags": ["ironvane", "logistics", "supply-chain", "profile"],
+    "body": "FICTIONAL COMPANY.\n\nIronvane Freight Systems is a supply chain software company, founded 2019, headquartered in Denver CO, ~620 employees.\n\nFINANCIALS (as of Q4 2025):\n- TTM revenue: $78M (+41% YoY)\n- High burn — last reported $8M/month\n- Series C, $95M raised Oct 2024\n\nRECENT MOVES:\n- Jan 2026: CPO Dana Okafor departed (subsequently joined Tinplate Merchant Systems as Head of Platform)\n- Dec 2025: Landed major contract with a top-5 US retailer — largest deal in company history\n- Nov 2025: Quiet layoff, ~8% of headcount\n\nCOMPETITIVE: Strong in warehouse/inventory management. Building out transportation optimization. Smaller footprint than incumbents but growing fast in mid-market."
+  },
+  {
+    "id": "kb-briefing-format",
+    "title": "Executive Briefing Format Guidelines",
+    "tags": ["briefing", "format", "style"],
+    "body": "Standard format for pre-meeting company briefings:\n\n1. LEAD WITH THE HOOK — what's the one thing the exec needs to know? Recent news, strategic shift, risk signal.\n2. NUMBERS — revenue, growth rate, profitability, cash position. Keep it to 3-4 data points.\n3. RECENT MOVES — product launches, hires, incidents. Last 90 days.\n4. COMPETITIVE CONTEXT — who are they up against, how are they positioned.\n5. TALKING POINTS — 2-3 things worth bringing up in the meeting.\n\nKeep it under 200 words. Bullets over paragraphs. Specific over vague — 'revenue grew 34%' beats 'revenue grew significantly.'"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "RB-001",
+    "title": "Elevated error rate after deploy",
+    "summary": "Steps to diagnose and roll back when error rates spike shortly after a deployment",
+    "steps": [
+      "Confirm timing: check if the error rate spike began within 15 minutes of a deploy. If yes, the deploy is the prime suspect.",
+      "Check the deploy changelog: what changed? Look for anything touching error-prone paths (payment, auth, DB writes).",
+      "Sample the errors: pull a few error messages from logs. Are they all the same class of error, or varied?",
+      "If errors are concentrated in new code paths from this deploy → proceed to rollback.",
+      "Initiate rollback: deploy the previous version. Note the version you're rolling back to.",
+      "Monitor for 10 minutes post-rollback. If error rate recovers, confirm root cause was the deploy and file an incident report.",
+      "If error rate does NOT recover after rollback, the deploy may be a red herring — escalate and check for infrastructure issues (DB, upstream dependencies)."
+    ]
+  },
+  {
+    "id": "RB-002",
+    "title": "Database connection exhaustion",
+    "summary": "When services can't get DB connections from the pool",
+    "steps": [
+      "Check active connection count on the DB primary (dashboard: 'PG Connections').",
+      "If near the connection limit: identify which service is holding the most connections.",
+      "Check for connection leaks: a recent deploy that forgot to release connections is the usual culprit.",
+      "Short-term mitigation: increase pool size or restart the offending service to release leaked connections.",
+      "Long-term: file a bug against the leaking code path."
+    ]
+  },
+  {
+    "id": "RB-003",
+    "title": "Upstream dependency degradation",
+    "summary": "When an external service we depend on (payment processor, auth provider) is slow or erroring",
+    "steps": [
+      "Check the provider's status page for acknowledged incidents.",
+      "Verify our requests are actually reaching them (vs. failing before egress).",
+      "If provider is down and we have a fallback/circuit breaker, confirm it's engaged.",
+      "If no fallback: communicate to customer-facing teams that the issue is upstream. Set expectations.",
+      "Monitor provider status. Resume normal operation once they recover."
+    ]
+  },
+  {
+    "id": "RB-004",
+    "title": "Memory pressure / OOM kills",
+    "summary": "When pods are being killed for exceeding memory limits",
+    "steps": [
+      "Identify which pods are being OOM-killed (kubectl get events, filter for OOMKilled).",
+      "Check if memory usage has been trending up (slow leak) or spiked suddenly (load-driven).",
+      "If slow leak: likely a code issue. Restart buys time, but file a bug.",
+      "If load spike: check if traffic is genuinely elevated. May need to scale horizontally.",
+      "Short-term: bump memory limits by 25% to stop the bleeding while investigating.",
+      "Do NOT just keep bumping limits — find the root cause."
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "_note": "FICTIONAL COMPANY — all data is synthetic workshop demo content",
+  "company": "Tinplate Merchant Systems",
+  "industry": "Financial Technology",
+  "founded": 2017,
+  "headquarters": "Austin, TX",
+  "employees": 1840,
+
+  "financials": {
+    "last_reported_quarter": "Q4 2025",
+    "revenue_ttm_usd": 412000000,
+    "revenue_growth_yoy_pct": 34,
+    "gross_margin_pct": 61,
+    "net_income_ttm_usd": -28000000,
+    "cash_on_hand_usd": 195000000,
+    "last_funding_round": {
+      "series": "D",
+      "amount_usd": 180000000,
+      "date": "2024-11",
+      "lead_investor": "Shalemark Venture Partners"
+    },
+    "notes": "Still burning cash but path to profitability projected for H2 2026. Gross margin expanded 7 points YoY as they shifted merchant mix upmarket."
+  },
+
+  "news": [
+    {
+      "date": "2026-02-18",
+      "headline": "Tinplate Merchant Systems launches embedded lending product for mid-market merchants",
+      "summary": "New 'Tinplate Capital' product offers working capital advances directly within the merchant dashboard. Initial rollout to merchants processing >$50k/month. Analysts see this as a direct response to competitors bundling lending with payments.",
+      "topics": ["product", "lending", "competitive"]
+    },
+    {
+      "date": "2026-02-10",
+      "headline": "Tinplate reports 34% revenue growth in Q4, beats estimates",
+      "summary": "Fourth-quarter revenue of $118M exceeded analyst consensus of $109M. Management cited strong enterprise segment adoption. Shares up 9% in after-hours trading.",
+      "topics": ["financials", "earnings"]
+    },
+    {
+      "date": "2026-01-29",
+      "headline": "Tinplate hires former Ironvane Freight Systems CPO as Head of Platform",
+      "summary": "Dana Okafor joins from Ironvane Freight Systems to lead platform strategy. Signals continued investment in API-first product expansion.",
+      "topics": ["hiring", "leadership", "product"]
+    },
+    {
+      "date": "2026-01-14",
+      "headline": "Merchant outage hits Tinplate checkout for 47 minutes",
+      "summary": "A database failover issue caused checkout failures for approximately 12% of merchants during peak hours. Tinplate published a postmortem citing a misconfigured health check. No customer data was affected.",
+      "topics": ["incident", "reliability"]
+    },
+    {
+      "date": "2025-12-03",
+      "headline": "Tinplate expands into Canada and UK",
+      "summary": "First international expansion. Company reports 200+ merchants already on waitlist in each market. Regulatory approval secured in both jurisdictions.",
+      "topics": ["expansion", "international"]
+    }
+  ],
+
+  "press_releases": [
+    {
+      "date": "2026-02-18",
+      "title": "Tinplate Merchant Systems Introduces Tinplate Capital",
+      "body": "AUSTIN, TX — Tinplate Merchant Systems today announced Tinplate Capital, an embedded lending solution that provides instant working capital to qualifying merchants directly from their Tinplate dashboard. Eligible merchants can access advances of up to 15% of their trailing 90-day processing volume with a single click, with repayment automatically deducted as a fixed percentage of future daily settlements. 'Our merchants told us access to capital was their number one pain point,' said CEO Jamie Ruiz. 'We already see their cash flow in real time — it made no sense to send them elsewhere for financing.' The product launches today for merchants processing over $50,000 per month, with broader availability planned for Q2 2026."
+    },
+    {
+      "date": "2026-02-10",
+      "title": "Tinplate Merchant Systems Reports Fourth Quarter and Full Year 2025 Results",
+      "body": "AUSTIN, TX — Tinplate Merchant Systems today reported Q4 2025 revenue of $118 million, up 34% year over year, and full-year 2025 revenue of $412 million, up 38% from 2024. Total payment volume processed reached $19.4 billion for the year. 'We closed 2025 with our strongest quarter yet in the enterprise segment,' said CFO Priya Nadarajah. 'The investments we made in our platform's reliability and compliance tooling are paying off with larger merchants.' The company ended the year with $195 million in cash and equivalents and reiterated guidance for operating breakeven in the second half of 2026."
+    },
+    {
+      "date": "2025-12-03",
+      "title": "Tinplate Merchant Systems Launches in Canada and the United Kingdom",
+      "body": "AUSTIN, TX — Tinplate Merchant Systems today announced general availability in Canada and the United Kingdom, marking the company's first expansion beyond the United States. Local acquiring partnerships and full regulatory approval are in place in both markets. 'International expansion has been our most-requested roadmap item for two years,' said VP of International Marcus Chen. 'We're thrilled to finally say yes.' Over 200 merchants in each market have joined the waitlist since the expansion was previewed at the company's annual merchant conference in September."
+    }
+  ],
+
+  "competitive_landscape": {
+    "direct_competitors": ["Bucklefern Commerce Holdings", "Wharfton Payment Rails", "Bronzefathom Transaction Works"],
+    "positioning": "Mid-market focus (merchants doing $500k–$50M annual volume). Differentiates on developer experience and embedded financial products. Weaker than competitors on in-person/POS — primarily online.",
+    "market_share_estimate_pct": 4.2
+  }
+}

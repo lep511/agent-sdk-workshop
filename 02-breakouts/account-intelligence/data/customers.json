@@ -1,0 +1,62 @@
+[
+  {
+    "id": "A-2201",
+    "email": "sarah.vance@pelledryn-data.example",
+    "name": "Sarah Vance",
+    "company": "Pelledryn Data Sciences",
+    "plan": "Growth",
+    "since": "2024-08",
+    "status": "active",
+    "mrr_usd": 3200,
+    "renewal_date": "2026-04-05",
+    "seats_licensed": 25,
+    "seats_active": 22,
+    "usage_trend_qoq": "+40%",
+    "notes": "Strong adoption — 22 of 25 seats active, usage up 40% QoQ. December QBR was positive, they called us 'essential to their workflow.' Executive sponsor is David Oyelaran, VP of Data Science. CSM: Morgan Reese."
+  },
+  {
+    "id": "A-3340",
+    "email": "ops@azurite-clinical.example",
+    "name": "IT Ops Team",
+    "company": "Azurite Clinical Networks",
+    "plan": "Growth",
+    "since": "2025-01",
+    "status": "active",
+    "mrr_usd": 2800,
+    "renewal_date": "2026-03-28",
+    "seats_licensed": 20,
+    "seats_active": 8,
+    "usage_trend_qoq": "-35%",
+    "notes": "Worrying trend — seat activation dropped from 14 to 8 over the last quarter. Three support tickets in the last month, all integration-related. Original champion (Jamie Liu, Director of Analytics) went quiet after the first month. CSM: Taylor Kim."
+  },
+  {
+    "id": "A-1908",
+    "email": "nadia.fernandez@glasswick-content.example",
+    "name": "Nadia Fernandez",
+    "company": "Glasswick Content Works",
+    "plan": "Enterprise",
+    "since": "2023-06",
+    "status": "active",
+    "mrr_usd": 8500,
+    "renewal_date": "2026-05-15",
+    "seats_licensed": 60,
+    "seats_active": 58,
+    "usage_trend_qoq": "+12%",
+    "notes": "Multi-year customer, rock-solid usage. Near-full seat utilization. Referenced us in two case studies. Renewal is not the question — expansion is. They mentioned a new business unit spinning up in Q2. CSM: Morgan Reese."
+  },
+  {
+    "id": "A-4477",
+    "email": "kai@wireflint-data.example",
+    "name": "Kai Nakamura",
+    "company": "Wireflint Data Systems",
+    "plan": "Starter",
+    "since": "2025-10",
+    "status": "active",
+    "mrr_usd": 450,
+    "renewal_date": "2026-04-12",
+    "seats_licensed": 5,
+    "seats_active": 3,
+    "usage_trend_qoq": "+8%",
+    "notes": "Small account, relatively new. Modest usage growth but from a low base. Only one touchpoint since onboarding — a brief email exchange in December. Hard to read. No CSM assigned (below threshold)."
+  }
+]

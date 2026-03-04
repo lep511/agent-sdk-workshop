@@ -1,0 +1,72 @@
+{
+  "_note": "FICTIONAL COMPANY — all data is synthetic workshop demo content",
+  "company": "Bucklefern Commerce Holdings",
+  "industry": "Financial Technology / E-commerce Infrastructure",
+  "founded": 2014,
+  "headquarters": "Seattle, WA",
+  "employees": 6200,
+
+  "financials": {
+    "last_reported_quarter": "Q4 2025",
+    "revenue_ttm_usd": 1840000000,
+    "revenue_growth_yoy_pct": 19,
+    "gross_margin_pct": 54,
+    "net_income_ttm_usd": 142000000,
+    "cash_on_hand_usd": 1100000000,
+    "public_since": "2022-06",
+    "market_cap_usd": 18500000000,
+    "notes": "Profitable since 2023. Growth slowing as the company matures — now competing on breadth of platform rather than payment rates alone."
+  },
+
+  "news": [
+    {
+      "date": "2026-02-20",
+      "headline": "Bucklefern Commerce Holdings to acquire inventory management startup Shelfcrane Inventory Systems for $340M",
+      "summary": "All-cash acquisition of Shelfcrane Inventory Systems adds real-time inventory sync to Bucklefern's merchant platform. Deal expected to close in Q2 pending regulatory review. Third acquisition in 18 months as Bucklefern builds out its 'commerce operating system' vision.",
+      "topics": ["acquisition", "product", "strategy"]
+    },
+    {
+      "date": "2026-02-12",
+      "headline": "Bucklefern's Q4 revenue growth slows to 19%, lowest in company history",
+      "summary": "Revenue of $512M met expectations but growth rate continues to decelerate from 31% a year ago. CEO attributes slowdown to 'intentional focus on merchant quality over quantity.' Stock down 6% on the print.",
+      "topics": ["financials", "earnings"]
+    },
+    {
+      "date": "2026-01-22",
+      "headline": "Bucklefern Commerce Holdings rolls out AI-powered fraud detection to all tiers",
+      "summary": "Previously enterprise-only fraud models now available to all merchants at no extra cost. Company claims 23% reduction in false declines during beta.",
+      "topics": ["product", "ai", "fraud"]
+    },
+    {
+      "date": "2026-01-08",
+      "headline": "Activist investor takes stake in Bucklefern Commerce Holdings, pushes for buybacks",
+      "summary": "Perthwick Capital Advisors discloses 3.1% stake and sends letter to board arguing cash pile is 'excessive' and should be returned to shareholders. Management has not yet responded publicly.",
+      "topics": ["investor", "governance", "financials"]
+    },
+    {
+      "date": "2025-11-19",
+      "headline": "Bucklefern launches in-person payments with new POS hardware",
+      "summary": "Long-rumored entry into physical retail. 'Bucklefern Terminal' starts at $199 and integrates with existing online storefronts. Direct challenge to incumbent POS players.",
+      "topics": ["product", "hardware", "expansion"]
+    }
+  ],
+
+  "press_releases": [
+    {
+      "date": "2026-02-20",
+      "title": "Bucklefern Commerce Holdings to Acquire Shelfcrane Inventory Systems",
+      "body": "SEATTLE, WA — Bucklefern Commerce Holdings today announced a definitive agreement to acquire Shelfcrane Inventory Systems, a leading inventory management platform, for approximately $340 million in cash. Shelfcrane Inventory Systems's real-time inventory sync technology will be integrated into the Bucklefern merchant dashboard, giving sellers a unified view of stock across online and in-person channels. 'Inventory is the next frontier for our platform,' said Bucklefern CEO Alex Tremblay. 'Shelfcrane Inventory Systems has built best-in-class sync technology and we're excited to bring it to every Bucklefern merchant.' Shelfcrane Inventory Systems's 95 employees will join Bucklefern's product organization. The transaction is expected to close in Q2 2026."
+    },
+    {
+      "date": "2026-01-22",
+      "title": "Bucklefern Commerce Holdings Brings AI Fraud Protection to Every Merchant",
+      "body": "SEATTLE, WA — Bucklefern Commerce Holdings today announced that its machine-learning fraud detection system, previously available only to enterprise customers, is now active for all merchants on the platform at no additional cost. During a six-month beta with over 4,000 merchants, the system reduced false declines by 23% while maintaining fraud loss rates. 'Every merchant deserves enterprise-grade fraud protection,' said Chief Product Officer Lena Fischer. 'The economics finally work to make this universal.'"
+    }
+  ],
+
+  "competitive_landscape": {
+    "direct_competitors": ["Tinplate Merchant Systems", "Wharfton Payment Rails", "Bronzefathom Transaction Works"],
+    "positioning": "Broadest platform — payments plus storefront plus back-office. Higher take rate than pure-payments competitors but offers more integrated value. Increasingly viewed as the 'safe enterprise choice.'",
+    "market_share_estimate_pct": 11.8
+  }
+}

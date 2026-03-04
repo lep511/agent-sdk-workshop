@@ -1,0 +1,44 @@
+[
+  {
+    "name": "checkout",
+    "status": "degraded",
+    "description": "Handles cart finalization and payment handoff",
+    "dependencies": ["inventory", "payment-gateway", "user-auth"],
+    "current_alerts": [
+      "error_rate above 2% threshold (current: 4.9%)"
+    ],
+    "last_deploy": "2026-03-05 11:42 (v2.14.1 — 'fix race condition in cart merge')"
+  },
+  {
+    "name": "inventory",
+    "status": "healthy",
+    "description": "Stock level tracking and reservation",
+    "dependencies": ["postgres-primary"],
+    "current_alerts": [],
+    "last_deploy": "2026-03-03 09:15 (v1.8.0)"
+  },
+  {
+    "name": "payment-gateway",
+    "status": "healthy",
+    "description": "External payment processor adapter",
+    "dependencies": [],
+    "current_alerts": [],
+    "last_deploy": "2026-02-28 14:00 (v3.2.1)"
+  },
+  {
+    "name": "user-auth",
+    "status": "healthy",
+    "description": "Session and identity management",
+    "dependencies": ["redis-sessions"],
+    "current_alerts": [],
+    "last_deploy": "2026-03-01 16:30 (v2.1.0)"
+  },
+  {
+    "name": "api-gateway",
+    "status": "healthy",
+    "description": "Edge routing and rate limiting",
+    "dependencies": ["checkout", "inventory", "user-auth"],
+    "current_alerts": [],
+    "last_deploy": "2026-03-04 10:00 (v4.0.2)"
+  }
+]
