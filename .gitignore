@@ -8,12 +8,16 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+debug/
 
 # Environments
 .env
 .venv
 env/
 venv/
+
+# UV
+uv.lock
 
 # Editors
 .vscode/

@@ -1,0 +1,12 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "sam-app-durable"
+resolve_s3 = true
+s3_prefix = "sam-app-durable"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "BedrockModelId=\"us.anthropic.claude-sonnet-4-6\""
+image_repositories = []
+
+[default.global.parameters]
+region = "us-east-1"

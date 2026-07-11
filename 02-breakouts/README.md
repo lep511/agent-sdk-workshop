@@ -8,6 +8,29 @@ No code writing. Lots of prompt writing. Fast iteration.
 
 ---
 
+## Prerequisites
+
+This project uses [UV](https://docs.astral.sh/uv/) for dependency management. Install it if you haven't:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+---
+
+## Setup
+
+From the `02-breakouts/` directory:
+
+```bash
+# Create virtual environment and install dependencies
+uv sync
+```
+
+Or let UV handle everything automatically — `uv run` will create the environment and install dependencies on first use.
+
+---
+
 ## Pick a breakout
 
 | Breakout | Use case | Good if you work on... |
@@ -35,7 +58,15 @@ Every breakout has the same shape:
 
 And every breakout uses the same shared framework in [`_shared/`](./_shared/).
 
-**You edit `config.py`. You run `./workshop breakout <name>`. That's the loop.**
+**You edit `config.py`. You run the agent. That's the loop.**
+
+```bash
+# From inside any breakout directory:
+uv run run.py
+
+# Or from the repo root:
+./workshop breakout <name>
+```
 
 ---
 
@@ -61,6 +92,18 @@ Quick summary:
 5. **Repeat** — most of your time should be on steps 3–4
 
 Component selection usually stabilizes in the first 10 minutes. **Prompt tuning is where the real work is.**
+
+---
+
+## Running without UV
+
+If you prefer not to use UV, you can install dependencies manually:
+
+```bash
+pip install claude-agent-sdk>=0.1.41 python-dotenv>=1.0.0
+cd <breakout-dir>
+python run.py
+```
 
 ---
 

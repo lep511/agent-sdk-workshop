@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "claude-agent-sdk>=0.1.41",
+#     "python-dotenv>=1.0.0",
+# ]
+# ///
 """
 Guided Demo — Company Research Briefing Agent
 
@@ -6,10 +13,10 @@ This is the single entry point for all four demo stages. You never need
 to edit this file — just flip the toggles in config.py and re-run.
 
 Run with:
-    ./workshop demo
+    uv run agent.py
 
-...or directly:
-    python 01-guided-demo/agent.py
+...or via the workshop script:
+    ./workshop demo
 """
 
 import asyncio

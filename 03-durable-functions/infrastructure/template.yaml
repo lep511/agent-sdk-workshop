@@ -1,0 +1,166 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Claude Agent SDK + AWS Lambda Durable Functions workshop examples.
+  Uses container images (SDK bundles a ~250MB CLI binary exceeding zip limits).
+
+Globals:
+  Function:
+    Timeout: 900
+    MemorySize: 1024
+    Architectures:
+      - arm64
+    Environment:
+      Variables:
+        CLAUDE_CODE_USE_BEDROCK: "1"
+        CLAUDE_CONFIG_DIR: /tmp
+        BEDROCK_REGION: !Ref AWS::Region
+
+Parameters:
+  BedrockModelId:
+    Type: String
+    Description: Bedrock model ID to use for Claude invocations
+    Default: us.anthropic.claude-sonnet-4-6
+
+Resources:
+  # ---------------------------------------------------------------------------
+  # Example 1: Basic Durable Agent
+  # ---------------------------------------------------------------------------
+  BasicDurableAgentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: basic-durable-agent
+      PackageType: Image
+      ImageConfig:
+        Command:
+          - examples.01_basic_durable_agent.handler.handler
+      Description: Basic Claude agent with durable step checkpointing
+      DurableConfig:
+        ExecutionTimeout: 900
+        RetentionPeriodInDays: 7
+      Policies:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicDurableExecutionRolePolicy
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - "arn:aws:bedrock:*::foundation-model/*"
+                - !Sub "arn:aws:bedrock:*:${AWS::AccountId}:inference-profile/*"
+                - "arn:aws:bedrock:*:*:inference-profile/*"
+      AutoPublishAlias: live
+      LoggingConfig:
+        LogGroup: !Ref BasicAgentLogGroup
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ../
+      DockerTag: latest
+
+  BasicAgentLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/basic-durable-agent
+      RetentionInDays: 14
+
+  # ---------------------------------------------------------------------------
+  # Example 2: Human Approval Agent
+  # ---------------------------------------------------------------------------
+  HumanApprovalAgentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: human-approval-agent
+      PackageType: Image
+      ImageConfig:
+        Command:
+          - examples.02_human_approval_agent.handler.handler
+      Description: Claude agent with human-in-the-loop approval via waitForCallback
+      DurableConfig:
+        ExecutionTimeout: 86400
+        RetentionPeriodInDays: 7
+      Policies:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicDurableExecutionRolePolicy
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - "arn:aws:bedrock:*::foundation-model/*"
+                - !Sub "arn:aws:bedrock:*:${AWS::AccountId}:inference-profile/*"
+                - "arn:aws:bedrock:*:*:inference-profile/*"
+      AutoPublishAlias: live
+      LoggingConfig:
+        LogGroup: !Ref ApprovalAgentLogGroup
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ../
+      DockerTag: latest
+
+  ApprovalAgentLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/human-approval-agent
+      RetentionInDays: 14
+
+  # ---------------------------------------------------------------------------
+  # Example 3: Multi-Agent Orchestrator
+  # ---------------------------------------------------------------------------
+  MultiAgentOrchestratorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: multi-agent-orchestrator
+      PackageType: Image
+      ImageConfig:
+        Command:
+          - examples.03_multi_agent_orchestrator.handler.handler
+      Description: Orchestrator that fans out to specialized sub-agents
+      DurableConfig:
+        ExecutionTimeout: 900
+        RetentionPeriodInDays: 7
+      Policies:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicDurableExecutionRolePolicy
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - "arn:aws:bedrock:*::foundation-model/*"
+                - !Sub "arn:aws:bedrock:*:${AWS::AccountId}:inference-profile/*"
+                - "arn:aws:bedrock:*:*:inference-profile/*"
+      AutoPublishAlias: live
+      LoggingConfig:
+        LogGroup: !Ref OrchestratorLogGroup
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ../
+      DockerTag: latest
+
+  OrchestratorLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/multi-agent-orchestrator
+      RetentionInDays: 14
+
+Outputs:
+  BasicAgentArn:
+    Description: ARN for the basic durable agent (invoke with :live alias)
+    Value: !GetAtt BasicDurableAgentFunction.Arn
+
+  ApprovalAgentArn:
+    Description: ARN for the human approval agent
+    Value: !GetAtt HumanApprovalAgentFunction.Arn
+
+  OrchestratorArn:
+    Description: ARN for the multi-agent orchestrator
+    Value: !GetAtt MultiAgentOrchestratorFunction.Arn
+
+  InvokeExample:
+    Description: Example invocation command
+    Value: !Sub |
+      aws lambda invoke \
+        --function-name basic-durable-agent:live \
+        --payload '{"prompt": "Research AWS Lambda durable functions"}' \
+        --cli-binary-format raw-in-base64-out \
+        response.json

@@ -1,0 +1,12 @@
+[project]
+name = "breakouts"
+version = "0.1.0"
+description = "Breakout exercises — pick a use case, build an agent"
+requires-python = ">=3.11"
+dependencies = [
+    "claude-agent-sdk>=0.1.41",
+    "python-dotenv>=1.0.0",
+]
+
+[dependency-groups]
+dev = []

@@ -4,9 +4,36 @@
 
 ---
 
+## Prerequisites
+
+This project uses [UV](https://docs.astral.sh/uv/) for dependency management. Install it if you haven't:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+---
+
+## Setup
+
+From the `01-guided-demo/` directory:
+
+```bash
+# Create virtual environment and install dependencies
+uv sync
+```
+
+Or let UV handle everything automatically — `uv run` will create the environment and install dependencies on first use.
+
+---
+
 ## The loop
 
-1. Run `./workshop demo` (from the repo root)
+1. Run the agent:
+   ```bash
+   uv run agent.py
+   ```
+   Or from the repo root: `./workshop demo`
 2. Read the output
 3. Open `config.py`, flip the next switch
 4. Repeat
@@ -43,12 +70,24 @@ The data is interlinked — Ironvane's departing CPO shows up in Tinplate's hiri
 | File | Purpose | Edit it? |
 |---|---|---|
 | **`config.py`** | The three toggles + stretch goals | **YES** |
+| `pyproject.toml` | Dependencies managed by UV | No |
 | `GUIDE.md` | Stage-by-stage walkthrough | No (read it!) |
 | `agent.py` | Entry point. **`build_options()` is the lesson** — read it. | No |
 | `tools.py` | `@tool`-decorated research tools | Peek at Stage 1 |
 | `subagents.py` | `AgentDefinition` specs | Peek at Stage 2 |
 | `memory.py` | Memory tool + context-injection hook | Peek at Stage 3 |
 | `mock_data/*.json` | Fictional company data | No |
+
+---
+
+## Running without UV
+
+If you prefer not to use UV, you can install dependencies manually:
+
+```bash
+pip install claude-agent-sdk>=0.1.41 python-dotenv>=1.0.0
+python agent.py
+```
 
 ---
 

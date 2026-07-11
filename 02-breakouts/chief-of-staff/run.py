@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "claude-agent-sdk>=0.1.41",
+#     "python-dotenv>=1.0.0",
+# ]
+# ///
 """Entry point for the Chief of Staff breakout. Don't edit this — edit config.py."""
 
 import sys

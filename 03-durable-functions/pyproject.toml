@@ -1,0 +1,17 @@
+[project]
+name = "durable-functions"
+version = "0.1.0"
+description = "Claude Agent SDK + AWS Lambda Durable Functions integration"
+requires-python = ">=3.11"
+dependencies = [
+    "claude-agent-sdk>=0.1.41",
+    "python-dotenv>=1.0.0",
+    "aws-durable-execution-sdk-python>=0.1.0",
+    "anthropic[bedrock]>=0.52.0",
+]
+
+[dependency-groups]
+dev = [
+    "aws-durable-execution-sdk-python-testing>=0.1.0",
+    "pytest>=8.0",
+]

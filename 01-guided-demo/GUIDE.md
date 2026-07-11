@@ -7,7 +7,9 @@ You're going to run the **same agent four times**, flipping one switch between e
 **The only file you edit:** [`config.py`](./config.py). Three boolean switches.
 
 ```bash
-./workshop demo     # from the repo root, every time
+uv run agent.py     # from 01-guided-demo/, every time
+# or from the repo root:
+./workshop demo
 ```
 
 ---
